@@ -1,7 +1,7 @@
 import { Character, ModelProviderName, Clients } from "./types.ts";
 
 export const defaultCharacter: Character = {
-    name: "Lumi",
+    name: "Lumi", 
     username: "lumi",
     plugins: [],
     clients: [Clients.TWITTER],
