@@ -196,7 +196,7 @@ export default function Page({ agentId }: { agentId: UUID }) {
                                     className="flex flex-row items-center gap-2"
                                 >
                                     {message?.user !== "user" ? (
-                                        <Avatar className="size-8 p-1 border rounded-full select-none">
+                                        <Avatar className="size-8 border rounded-full select-none">
                                             <AvatarImage src="/lumi.webp" />
                                         </Avatar>
                                     ) : null}
