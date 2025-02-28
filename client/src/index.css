@@ -74,9 +74,9 @@
         @apply bg-background text-foreground;
     }
 }
-
+/* 
 .agent-card {
     height: auto;
     width: 100%;
     max-width: 600px;
-}
+} */
