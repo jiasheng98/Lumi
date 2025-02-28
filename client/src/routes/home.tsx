@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { Cog } from "lucide-react";
+// import { Cog } from "lucide-react";
 import PageTitle from "@/components/page-title";
 import { Button } from "@/components/ui/button";
 import {
@@ -52,14 +52,14 @@ export default function Home() {
                                         Chat
                                     </Button>
                                 </NavLink>
-                                <NavLink
+                                {/* <NavLink
                                     to={`/settings/${agent.id}`}
                                     key={agent.id}
                                 >
                                     <Button size="icon" variant="outline">
                                         <Cog />
                                     </Button>
-                                </NavLink>
+                                </NavLink> */}
                             </div>
                         </CardFooter>
                     </Card>
