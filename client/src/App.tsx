@@ -5,15 +5,10 @@ import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { TooltipProvider } from "./components/ui/tooltip";
 import { Toaster } from "./components/ui/toaster";
 import { BrowserRouter, Route, Routes } from "react-router";
-// import Chat from "./routes/chat";
+import Chat from "./routes/chat";
 import Overview from "./routes/overview";
 import Home from "./routes/home";
 import useVersion from "./hooks/use-version";
-import { useParams } from "react-router";
-import Chat from "@/components/chat";
-import type { UUID } from "@elizaos/core";
-
-
 
 const queryClient = new QueryClient({
     defaultOptions: {
@@ -24,9 +19,6 @@ const queryClient = new QueryClient({
 });
 
 function App() {
-      const { agentId } = useParams<{ agentId: UUID }>();
-
-    if (!agentId) return <div>No data.</div>;
     useVersion();
     return (
         <QueryClientProvider client={queryClient}>
@@ -42,7 +34,17 @@ function App() {
                             {/* <AppSidebar /> */}
                             <SidebarInset>
                                 <div className="flex flex-1 flex-col gap-4 size-full container">
-                                  <Chat agentId={agentId} />
+                                    <Routes>
+                                        <Route path="/" element={<Home />} />
+                                        <Route
+                                            path="chat/:agentId"
+                                            element={<Chat />}
+                                        />
+                                        <Route
+                                            path="settings/:agentId"
+                                            element={<Overview />}
+                                        />
+                                    </Routes>
                                 </div>
                             </SidebarInset>
                         </SidebarProvider>
