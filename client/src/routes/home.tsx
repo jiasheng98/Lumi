@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 // import { Cog } from "lucide-react";
-import PageTitle from "@/components/page-title";
+// import PageTitle from "@/components/page-title";
 import { Button } from "@/components/ui/button";
 import {
     Card,
@@ -24,20 +24,22 @@ export default function Home() {
     const agents = query?.data?.agents;
 
     return (
-        <div className="flex flex-col gap-4 h-full p-4">
-            <PageTitle title="Agents" />
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="flex flex-col gap-4 h-full p-4 justify-center">
+            {/* <PageTitle title="Agents" /> */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
                 {agents?.map((agent: { id: UUID; name: string }) => (
                     <Card key={agent.id}>
                         <CardHeader>
                             <CardTitle>{agent?.name}</CardTitle>
                         </CardHeader>
                         <CardContent>
+                            <div></div>
                             <div className="rounded-md bg-muted aspect-square w-full grid place-items-center">
                                 <div className="text-6xl font-bold uppercase">
                                     {formatAgentName(agent?.name)}
                                 </div>
                             </div>
+                            <div></div>
                         </CardContent>
                         <CardFooter>
                             <div className="flex items-center gap-4 w-full">
