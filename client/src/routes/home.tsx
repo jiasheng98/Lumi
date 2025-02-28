@@ -12,7 +12,7 @@ import {
 import { apiClient } from "@/lib/api";
 import { NavLink } from "react-router";
 import type { UUID } from "@elizaos/core";
-import { formatAgentName } from "@/lib/utils";
+// import { formatAgentName } from "@/lib/utils";
 
 export default function Home() {
     const query = useQuery({
@@ -34,9 +34,9 @@ export default function Home() {
                         </CardHeader>
                         <CardContent>
                             <div className="rounded-md bg-muted aspect-square grid place-items-center agent-card">
-                                <div className="text-6xl font-bold uppercase">
+                                {/* <div className="text-6xl font-bold uppercase">
                                     {formatAgentName(agent?.name)}
-                                </div>
+                                </div> */}
                             </div>
                         </CardContent>
                         <CardFooter>
