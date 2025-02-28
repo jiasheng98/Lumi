@@ -81,3 +81,7 @@
     max-width: 600px;
     background-image: url('../public/lumi.webp');
 }
+
+.agent-bg {
+    background-image: url('../public/lumi.webp');
+}

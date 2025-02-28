@@ -33,7 +33,7 @@ export default function Home() {
                             <CardTitle>{agent?.name}</CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <div className="rounded-md bg-muted aspect-square grid place-items-center agent-card">
+                            <div className="rounded-md bg-muted aspect-square grid place-items-center agent-bg">
                                 {/* <div className="text-6xl font-bold uppercase">
                                     {formatAgentName(agent?.name)}
                                 </div> */}
