@@ -79,9 +79,10 @@
     height: auto;
     width: 100%;
     max-width: 600px;
-    background-image: url('../public/lumi.webp');
+    /* background-image: url('../public/lumi.webp'); */
 }
 
 .agent-bg {
     background-image: url('../public/lumi.webp');
+    background-size: cover;
 }
