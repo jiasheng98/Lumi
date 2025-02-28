@@ -26,20 +26,20 @@ export default function Home() {
     return (
         <div className="flex flex-col gap-4 h-full p-4 justify-center">
             {/* <PageTitle title="Agents" /> */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
+            <div className="flex p-4 justify-center">
                 {agents?.map((agent: { id: UUID; name: string }) => (
                     <Card key={agent.id}>
                         <CardHeader>
                             <CardTitle>{agent?.name}</CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <div></div>
-                            <div className="rounded-md bg-muted aspect-square w-full grid place-items-center">
+                            {/* <div></div> */}
+                            <div className="rounded-md bg-muted aspect-square w-full grid place-items-center w-full h-auto" style={{maxWidth: '200px'}}>
                                 <div className="text-6xl font-bold uppercase">
                                     {formatAgentName(agent?.name)}
                                 </div>
                             </div>
-                            <div></div>
+                            {/* <div></div> */}
                         </CardContent>
                         <CardFooter>
                             <div className="flex items-center gap-4 w-full">
