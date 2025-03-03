@@ -5,7 +5,7 @@ export const defaultCharacter: Character = {
     username: "lumi",
     plugins: [],
     clients: [Clients.TWITTER],
-    modelProvider: ModelProviderName.OPENROUTER,
+    modelProvider: ModelProviderName.OPENAI,
     settings: {
         secrets: {},
         voice: {
